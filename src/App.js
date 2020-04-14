@@ -7,9 +7,6 @@ import Amplify, { Auth } from 'aws-amplify';
 import aws_exports from './aws-exports';
 Amplify.configure(aws_exports);
 
-function fetch() {
-  return new Promise(resolve => setTimeout(() => resolve(42), 1000));
-}
 
 function fetchAPI(param) {
   // param is a highlighted word from the user before it clicked the button
