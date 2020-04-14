@@ -28,8 +28,8 @@ class App extends Component {
       </div>
     );
   }*/
-let apiName = 'MyApiName';
-let path = '/path';
+let apiName = 'https://4jn3tcfslb.execute-api.ap-southeast-2.amazonaws.com/dev';
+let path = '/stop';
 let options = {
   headers: {...} // OPTIONAL
 }
