@@ -18,9 +18,7 @@ class App extends Component {
   handleSmthng(arg1) {
     let apiName = 'https://4jn3tcfslb.execute-api.ap-southeast-2.amazonaws.com/dev';
     let path = '/stop';
-    let options = {
-      headers: {...} // OPTIONAL
-    }
+    
     API.get(apiName, path, options).then(response => {
     // Add your code here
     });
