@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import API from '@aws-amplify/api';
 import { withAuthenticator } from 'aws-amplify-react'
 import Amplify, { Auth } from 'aws-amplify';
 import aws_exports from './aws-exports';
 Amplify.configure(aws_exports);
 
 class App extends Component {
-  render() {
+  /*render() {
     return (
       <div className="App">
         <header className="App-header">
@@ -26,7 +27,15 @@ class App extends Component {
         </header>
       </div>
     );
-  }
+  }*/
+let apiName = 'MyApiName';
+let path = '/path';
+let options = {
+  headers: {...} // OPTIONAL
+}
+API.get(apiName, path, options).then(response => {
+  // Add your code here
+});
 }
 
 export default withAuthenticator(App, true);
