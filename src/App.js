@@ -8,34 +8,23 @@ import aws_exports from './aws-exports';
 Amplify.configure(aws_exports);
 
 class App extends Component {
-  /*render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src1/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }*/
-let apiName = 'https://4jn3tcfslb.execute-api.ap-southeast-2.amazonaws.com/dev';
-let path = '/stop';
-let options = {
-  headers: {...} // OPTIONAL
-}
-API.get(apiName, path, options).then(response => {
-  // Add your code here
-});
+  
+  render() {
+    <button onClick={() => this.handleSmthng('foo')}>
+      STOP
+    </button>
+  }
+  
+  handleSmthng(arg1) {
+    let apiName = 'https://4jn3tcfslb.execute-api.ap-southeast-2.amazonaws.com/dev';
+    let path = '/stop';
+    let options = {
+      headers: {...} // OPTIONAL
+    }
+    API.get(apiName, path, options).then(response => {
+    // Add your code here
+    });
+  }
 }
 
 export default withAuthenticator(App, true);
